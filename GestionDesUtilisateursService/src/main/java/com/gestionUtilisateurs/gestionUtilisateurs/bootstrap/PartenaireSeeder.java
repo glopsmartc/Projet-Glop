@@ -41,17 +41,17 @@ public class PartenaireSeeder implements ApplicationListener<ContextRefreshedEve
 
     public void createPartenaires() {
         List<RegisterUserDto> users = List.of(
-                new RegisterUserDto("suzanne@email.com", motDePasse, "dupont", "Suzanne", "+628123456789", "Jakarta, Indonisie", "Feminin"),
-                new RegisterUserDto("marc@email.com", motDePasse, "legrand", "Marc", "+17987654345", "Toronto, Canada", "Masculin"),
-                new RegisterUserDto("fatima@email.com", motDePasse, "bennani", "Fatima", "+2126654321", "Casablanca, Maroc", "Feminin"),
-                new RegisterUserDto("lucas@email.com", motDePasse, "fernandez", "Lucas", "+551199887766", "São Paulo, Brésil", "Masculin")
+                new RegisterUserDto("suzanne@email.com", motDePasse, "dupont", "Suzanne", "+628123456789", "Séoul, Corée du Sud, Asie", "Feminin"),
+                new RegisterUserDto("marc@email.com", motDePasse, "legrand", "Marc", "+17987654345", "Toronto, Canada, Amérique du Nord", "Masculin"),
+                new RegisterUserDto("fatima@email.com", motDePasse, "bennani", "Fatima", "+2126654321", "Casablanca, Maroc, Afrique", "Feminin"),
+                new RegisterUserDto("lucas@email.com", motDePasse, "fernandez", "Lucas", "+551199887766", "São Paulo, Brésil, Amérique du Sud", "Masculin")
         );
 
         List<String> entreprises = List.of(
-                "Logistique Indonisie",
+                "Logistique Asie",
                 "Tech Solutions Canada",
-                "Bennani Commerce",
-                "Fernandez Industries"
+                "Bennani Services",
+                "Fernandez logistique"
         );
 
         Optional<Role> optionalRole = roleRepository.findByName(RoleEnum.PARTENAIRE);
